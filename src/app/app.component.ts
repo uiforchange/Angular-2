@@ -39,6 +39,7 @@ export class AppComponent implements OnInit{
     ngOnInit() {
       this.createFormControls();
       this.createForm();
+      console.log(this.service)
       this.service.getjoke();
     }
   

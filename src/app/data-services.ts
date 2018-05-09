@@ -8,7 +8,8 @@ import { Joke } from './shared/joke';
 export class DataService {
   constructor(private http: HttpClient) {
   }
-  getjoke(): Observable<Joke> {
-    return this.http.get<Joke>('http://localhost:3000/api/bears')
+  getjoke(): Observable<any> {
+    console.log("dsdsd")
+    return this.http.get('http://localhost:3000/api/bears', {responseType: 'json'});
   }
 }
